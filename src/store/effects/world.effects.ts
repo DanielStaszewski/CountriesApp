@@ -1,3 +1,4 @@
+
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { Actions, Effect } from "@ngrx/effects";
@@ -9,10 +10,10 @@ import { AppState } from "..";
 @Injectable()
 export class WorldEffects{
 
-    @Effect()
-    loadCountriesData$: Observable<Action> = this.actions$.pipe(
+    // @Effect()
+    // loadCountriesData$: Observable<Action> = this.actions$.pipe(
 
-    )
+    // )
 
 
     constructor(private actions$: Actions,

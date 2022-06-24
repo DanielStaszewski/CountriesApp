@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
@@ -7,6 +7,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { WorldEffects } from 'src/store/effects/world.effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -16,12 +17,12 @@ import { environment } from 'src/environments/environment';
     BrowserModule,
     StoreModule.forRoot(Reducers),
     EffectsModule.forRoot([
-      WorldEffects
+      WorldEffects,
     ]),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production
-    }),
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
