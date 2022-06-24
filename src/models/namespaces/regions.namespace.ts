@@ -1,7 +1,7 @@
 export namespace Regions {
-    const EUROPE = 'europe'
-    const AMERICA = 'america';
-    const ASIA = 'asia';
-    const OCEANIA = 'oceania';
-    const AFRICA = 'africa';
+    export const EUROPE = 'europe'
+    export const AMERICA = 'america';
+    export const ASIA = 'asia';
+    export const OCEANIA = 'oceania';
+    export const AFRICA = 'africa';
 }
