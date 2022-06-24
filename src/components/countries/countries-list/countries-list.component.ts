@@ -14,7 +14,7 @@ export class CountriesListComponent implements OnInit {
   constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
-    this.store.dispatch(new GetCountriesByRegion(Regions.EUROPE))
+    this.store.dispatch(new GetCountriesByRegion({region: Regions.EUROPE}))
   }
 
 }
