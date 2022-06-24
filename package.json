@@ -12,7 +12,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~11.1.2",
-    "@angular/common": "~11.1.2",
+    "@angular/common": "^11.2.14",
     "@angular/compiler": "~11.1.2",
     "@angular/core": "~11.1.2",
     "@angular/forms": "~11.1.2",
@@ -24,7 +24,7 @@
     "@ngrx/store-devtools": "^10.0.0",
     "framer-motion": "^4.1.17",
     "immer": "^9.0.15",
-    "rxjs": "~6.6.0",
+    "rxjs": "^6.6.7",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
   },

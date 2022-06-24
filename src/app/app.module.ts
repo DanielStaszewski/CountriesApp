@@ -8,6 +8,7 @@ import { WorldEffects } from 'src/store/effects/world.effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { NgModule } from '@angular/core';
   imports: [
     BrowserModule,
     StoreModule.forRoot(Reducers),
+    CommonModule,
     EffectsModule.forRoot([
       WorldEffects,
     ]),
