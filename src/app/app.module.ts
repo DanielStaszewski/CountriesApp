@@ -13,7 +13,7 @@ import { BodyComponent } from 'src/components/layout/body/body.component';
 import { FooterComponent } from 'src/components/layout/footer/footer.component';
 import { WizardComponent } from 'src/components/layout/wizard/wizard.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +26,7 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     StoreModule.forRoot(Reducers),
     EffectsModule.forRoot([
       WorldEffects,
