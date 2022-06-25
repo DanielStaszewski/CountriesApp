@@ -1,0 +1,16 @@
+<div class="countries">
+    <header class="countries__header">
+            <breadcrumbs-component [breadcrumbs]="routeForBreadcrumbs"></breadcrumbs-component>
+            <img src="../../../assets/images/triangle.svg" alt="triangle" class="countries__triangle">
+            <h1 class="countries__title">
+                {{capitalizeFirstLetter(region) + "'s countries"}}
+            </h1>
+            <p class="countries__description">
+                Select a country by clicking on the appropriate row in the table and find out more about it!
+            </p>
+    </header>
+    <section class="countries__list">
+        <countries-list-component></countries-list-component>
+    </section>
+</div>
+

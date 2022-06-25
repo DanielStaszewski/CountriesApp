@@ -1,11 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { Region } from 'src/models/types/region.type';
 import { AppState } from 'src/store';
-import { GetCountriesByRegion } from 'src/store/actions/world.actions';
 import { countriesForRegion } from '../../../store/index';
 
 @Component({
@@ -15,17 +13,13 @@ import { countriesForRegion } from '../../../store/index';
 })
 export class CountriesListComponent implements OnInit {
 
-  private region: Region;
+  @Input() region: Region;
   private subscription: Subscription = new Subscription();
   public countries = [];
-  public columns = ["#", "status", "independent"];
 
-  constructor(private store: Store<AppState>, private route: ActivatedRoute) { }
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
-    this.region = this.route.snapshot.paramMap.get('region') as Region;
-    this.store.dispatch(new GetCountriesByRegion({region: this.region}))
-
     this.subscription.add(
       this.store.pipe(
         select(countriesForRegion),
@@ -33,7 +27,6 @@ export class CountriesListComponent implements OnInit {
         )
         .subscribe(countries => {
           this.countries = countries;
-          console.log(this.countries);
         })
     )
   }
@@ -43,7 +36,7 @@ export class CountriesListComponent implements OnInit {
   }
 
   onCountryRowClicked(country){
-    
+
   }
 
 }

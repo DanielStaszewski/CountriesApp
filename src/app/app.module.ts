@@ -20,6 +20,8 @@ import { RegionsItemComponent } from 'src/components/regions/regions-item/region
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { CountriesListComponent } from 'src/components/countries/countries-list/countries-list.component';
+import { CountriesComponent } from 'src/components/countries/countries/countries.component';
+import { BreadcrumbsComponent } from 'src/components/layout/breadcrumbs/breadcrumbs.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { CountriesListComponent } from 'src/components/countries/countries-list/
     RegionsComponent,
     RegionsListComponent,
     RegionsItemComponent,
-    CountriesListComponent
+    CountriesListComponent,
+    CountriesComponent,
+    BreadcrumbsComponent
   ],
   imports: [
     BrowserModule,

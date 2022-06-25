@@ -1,0 +1,10 @@
+<div class="breadcrumbs-row">
+    <ng-container *ngFor="let breadcrumb of breadcrumbs; index as i">
+        <span 
+            [ngClass]="i === breadcrumbs.length-1 ? 'active' : 'primary-500-fg'" 
+            (click)="onClickParentUrl(breadcrumb.route)">
+            {{breadcrumb.routeName}}
+        </span>
+        <img *ngIf="i < breadcrumbs.length - 1" class="crumb-icon" src="../../../assets/images/next.svg">
+    </ng-container>
+</div>

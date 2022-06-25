@@ -1,0 +1,28 @@
+@mixin breadcrumbs($primary, $secondary){
+    .breadcrumbs-row{
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        margin-bottom: 20px;
+        padding-left: 0;
+    
+        span {
+            color: $primary;
+            cursor: pointer;
+        }
+    
+        span:last-child {
+            color: $secondary;
+            cursor: auto;
+        }
+    }
+    
+    .active {
+        color: #6a6a6a;
+    }
+    
+    .crumb-icon {
+        width: 17px;
+        margin: 0 3px;
+    }
+}

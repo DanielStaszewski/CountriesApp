@@ -1,0 +1,32 @@
+@mixin countries($secondary, $lightBackground){
+
+    .countries{
+
+        &__header{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 15rem 10rem 1rem 10rem;
+            box-sizing: border-box;
+            background-color: $lightBackground;
+        }
+
+        &__triangle{
+            position: absolute;
+            top: 10rem;
+            left: 8rem;
+        }
+
+        &__title{
+            color: $secondary;
+            margin-bottom: 1rem;
+        }
+
+        &__description{
+            color: $secondary;
+            font-size: 1.6rem;
+            line-height: 1.5;
+        }
+
+    }
+}

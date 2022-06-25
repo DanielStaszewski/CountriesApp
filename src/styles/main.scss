@@ -7,18 +7,21 @@
 @import './mixins/buttons.scss';
 @import './mixins/regions.scss';
 @import './mixins/country-list.scss';
-@import './mixins/country-item.scss';
+@import './mixins/countries.scss';
 @import './mixins/regions-list.scss';
 @import './mixins/regions-item.scss';
+@import './mixins/breadcrumbs.scss';
 
 @include header($primary, $secondary, $white);
 @include footer($primary, $secondary, $white);
 @include buttons($primary, $secondary, $white);
-@include countryList($primary, $gray300);
-@include countryItem($white, $tertiary);
+@include breadcrumbs($primary, $secondary);
+@include countryList($primary, $gray300, $lightBackground);
+@include countries($secondary, $lightBackground);
 @include regions($primary, $secondary, $white);
 @include regionsList($primary, $secondary, $lightBackground, $white);
 @include regionsItem($primary, $secondary, $white);
+
 
 html{
     font-size: 10px;
