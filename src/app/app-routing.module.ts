@@ -6,7 +6,7 @@ import { RegionsComponent } from 'src/components/regions/regions/regions.compone
 const routes: Routes = [
     {path: '', redirectTo: 'regions', pathMatch: 'full'}, 
     {path: 'regions', component: RegionsComponent}, 
-    {path: 'countries', component: CountriesListComponent}, 
+    {path: 'regions/:region', component: CountriesListComponent },
     {path: '**', redirectTo: 'regions', pathMatch: 'full' }
   ];
 

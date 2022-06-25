@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Regions } from 'src/models/namespaces/regions.namespace';
+import { Region } from 'src/models/types/region.type';
 import { AppState } from 'src/store';
 import { GetCountriesByRegion } from 'src/store/actions/world.actions';
 
@@ -11,10 +13,13 @@ import { GetCountriesByRegion } from 'src/store/actions/world.actions';
 })
 export class CountriesListComponent implements OnInit {
 
-  constructor(private store: Store<AppState>) { }
+  private region: Region;
+
+  constructor(private store: Store<AppState>, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.store.dispatch(new GetCountriesByRegion({region: Regions.EUROPE}))
+    this.region = this.route.snapshot.paramMap.get('region') as Region;
+    this.store.dispatch(new GetCountriesByRegion({region: this.region}))
   }
 
 }
