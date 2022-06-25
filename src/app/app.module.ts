@@ -23,6 +23,7 @@ import { CountriesListComponent } from 'src/components/countries/countries-list/
 import { CountriesComponent } from 'src/components/countries/countries/countries.component';
 import { BreadcrumbsComponent } from 'src/components/layout/breadcrumbs/breadcrumbs.component';
 import { SpinnerComponent } from 'src/components/layout/spinner/spinner.component';
+import { CountryDetailsComponent } from 'src/components/countries/country-details/country-details.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { SpinnerComponent } from 'src/components/layout/spinner/spinner.componen
     CountriesListComponent,
     CountriesComponent,
     BreadcrumbsComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    CountryDetailsComponent
   ],
   imports: [
     BrowserModule,

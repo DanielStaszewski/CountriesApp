@@ -14,3 +14,5 @@ export const Reducers: ActionReducerMap<AppState> = {
 export const worldState = (state: AppState) => state.worldState;
 export const isLoading = createSelector(worldState, (state: WorldState) => state.isLoading);
 export const countriesForRegion = createSelector(worldState, (state: WorldState, r: Region) => state.regions.find(region => region.name === r)?.countries);
+export const country = createSelector(worldState, (state: WorldState, c: {regionName: Region, country: string}) => 
+    state.regions.find(region => region.name === c.regionName)?.countries.find(country => country.name.common === c.country));

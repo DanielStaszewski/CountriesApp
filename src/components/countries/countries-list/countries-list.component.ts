@@ -1,5 +1,5 @@
 import {  Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
@@ -18,7 +18,7 @@ export class CountriesListComponent implements OnInit {
   public countries$: Observable<any>;
   region: Region;
 
-  constructor(private store: Store<AppState>, private route: ActivatedRoute) { }
+  constructor(private store: Store<AppState>, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
       this.region = this.route.snapshot.paramMap.get('region') as Region;
@@ -31,7 +31,7 @@ export class CountriesListComponent implements OnInit {
   }
 
   onCountryRowClicked(country){
-
+    this.router.navigate(['/regions', this.region, country.name.common]);
   }
 
 }
