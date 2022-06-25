@@ -1,13 +1,14 @@
-import { ActionReducerMap } from "@ngrx/store";
-import { countriesReducer, CountriesState } from "./reducers/countries.reducer";
+import { ActionReducerMap, createSelector } from "@ngrx/store";
+import { worldReducer, WorldState } from "./reducers/world.reducer";
 
 export interface AppState {
-    countriesState: CountriesState;
+    worldState: WorldState;
 }
 
 export const Reducers: ActionReducerMap<AppState> = {
-    countriesState: countriesReducer
+    worldState: worldReducer
 }
 
 //selectors 
-export const countriesState = (state: AppState) => state.countriesState;
+export const worldState = (state: AppState) => state.worldState;
+export const countriesForRegion = createSelector(worldState, (state: WorldState) => state.regions.find(region => region.active)?.countries);
