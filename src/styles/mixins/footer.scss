@@ -1,0 +1,46 @@
+@mixin footer($primary, $secondary, $white){
+
+    .footer{
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 40px;
+
+        &__content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+
+        &__logo{    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 75px;
+            height: 75px;
+            padding: 5px;
+            background-color: $primary;
+            box-sizing: border-box;
+        }
+
+        &__btn{
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-size: 1.6rem;
+            padding: 1rem 3rem;
+        }
+
+        &__bottom{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid #EAF9FF;
+            padding: 10px 0;
+        }
+
+        &__rights{
+            opacity: 0.5;
+        }
+
+    }
+}

@@ -1,0 +1,18 @@
+@mixin buttons($primary, $secondary, $white){
+
+    .btn{
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .primary-btn{
+        background-color: $primary;
+        color: $white;
+
+        &:hover{
+            background-color: darken($primary, 10%);
+        }
+    }
+}

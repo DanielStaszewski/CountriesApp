@@ -2,6 +2,8 @@
 @import 'icons.scss';
 
 @import './mixins/header.scss';
+@import './mixins/footer.scss';
+@import './mixins/buttons.scss';
 @import './mixins/regions.scss';
 @import './mixins/country-list.scss';
 @import './mixins/country-item.scss';
@@ -9,6 +11,8 @@
 @import './mixins/regions-item.scss';
 
 @include header($primary, $secondary, $white);
+@include footer($primary, $secondary, $white);
+@include buttons($primary, $secondary, $white);
 @include countryList();
 @include countryItem($white, $tertiary);
 @include regions($primary, $secondary, $white);
