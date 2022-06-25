@@ -11,10 +11,12 @@
 @import './mixins/regions-list.scss';
 @import './mixins/regions-item.scss';
 @import './mixins/breadcrumbs.scss';
+@import './mixins/spinner.scss';
 
 @include header($primary, $secondary, $white);
 @include footer($primary, $secondary, $white);
 @include buttons($primary, $secondary, $white);
+@include spinner($primary);
 @include breadcrumbs($primary, $secondary);
 @include countryList($primary, $gray300, $lightBackground);
 @include countries($secondary, $lightBackground);

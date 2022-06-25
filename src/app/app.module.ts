@@ -22,6 +22,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CountriesListComponent } from 'src/components/countries/countries-list/countries-list.component';
 import { CountriesComponent } from 'src/components/countries/countries/countries.component';
 import { BreadcrumbsComponent } from 'src/components/layout/breadcrumbs/breadcrumbs.component';
+import { SpinnerComponent } from 'src/components/layout/spinner/spinner.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { BreadcrumbsComponent } from 'src/components/layout/breadcrumbs/breadcru
     RegionsItemComponent,
     CountriesListComponent,
     CountriesComponent,
-    BreadcrumbsComponent
+    BreadcrumbsComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

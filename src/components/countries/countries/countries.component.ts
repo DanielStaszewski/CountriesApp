@@ -15,7 +15,7 @@ export class CountriesComponent implements OnInit {
   region: Region;
   public routeForBreadcrumbs: {
     route: string;
-    routeName: string
+    routeName: string;
   }[];
 
   constructor(private route: ActivatedRoute, private store: Store<AppState>) { }
