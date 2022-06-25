@@ -1,1 +1,9 @@
-<p>{{region}}</p>
+<div class="regions-item">
+    <h2 class="regions-item__title">
+        {{region}}
+    </h2>
+    <img src="../../../assets/images/triangle.svg" alt="triangle" class="regions-item__triangle">
+    <div class="regions-item__square">
+        <img [src]="'../../../assets/images/' + region + '.svg'" alt="" class="regions-item__continent-img">
+    </div>
+</div>

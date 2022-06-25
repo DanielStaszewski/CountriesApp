@@ -1,0 +1,32 @@
+@mixin regionsList($primary, $secondary, $lightBackground, $white){
+    .regions-list{
+        position: relative;
+        box-sizing: border-box;
+        padding: 8rem 10rem 5rem 10rem;
+        background-color: $lightBackground;
+
+        &__title{
+            padding-left: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        &__triangle{
+            position: absolute;
+            top: 6rem;
+            left: 8rem;
+        }
+
+        &__list{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__item{
+            box-sizing: border-box;
+            padding: 0 3rem;
+            margin-bottom: 3rem;
+            width: calc(100% / 3);
+            height: 200px;
+        }
+    }
+}

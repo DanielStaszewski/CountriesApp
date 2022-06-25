@@ -5,11 +5,15 @@
 @import './mixins/regions.scss';
 @import './mixins/country-list.scss';
 @import './mixins/country-item.scss';
+@import './mixins/regions-list.scss';
+@import './mixins/regions-item.scss';
 
 @include header($primary, $secondary, $white);
 @include countryList();
 @include countryItem($white, $tertiary);
 @include regions($primary, $secondary, $white);
+@include regionsList($primary, $secondary, $lightBackground, $white);
+@include regionsItem($primary, $secondary, $white);
 
 html{
     font-size: 10px;

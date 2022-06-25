@@ -1,7 +1,11 @@
 <div class="regions-list">
-    <div class="regions-list__item" *ngFor="let region of regions">
-        <region-item-component
-        [region]="region">
-        </region-item-component>
+    <h1 class="regions-list__title">Regions list</h1>
+    <img src="../../../assets/images/triangle.svg" alt="triangle" class="regions-list__triangle">
+    <div class="regions-list__list">
+        <div class="regions-list__item" *ngFor="let region of regions">
+            <regions-item-component
+            [region]="region">
+            </regions-item-component>
+        </div>
     </div>
 </div>

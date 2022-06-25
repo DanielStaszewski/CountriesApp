@@ -8,7 +8,13 @@ import { Regions } from 'src/models/namespaces/regions.namespace';
 })
 export class RegionsListComponent implements OnInit {
 
-  public regions = Regions;
+  public regions = [
+    Regions.AFRICA,
+    Regions.AMERICA,
+    Regions.ASIA,
+    Regions.EUROPE,
+    Regions.OCEANIA
+  ];
 
   constructor() { }
 
