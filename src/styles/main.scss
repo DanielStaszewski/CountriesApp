@@ -2,17 +2,40 @@
 @import 'icons.scss';
 
 @import './mixins/header.scss';
+@import './mixins/regions.scss';
 @import './mixins/country-list.scss';
 @import './mixins/country-item.scss';
 
 @include header($primary, $secondary, $white);
 @include countryList();
 @include countryItem($white, $tertiary);
+@include regions($primary, $secondary, $white);
 
 html{
     font-size: 10px;
   }
+
   body,html {
     font-family: 'Poppins', sans-serif;
     color: #304956;
+  }
+
+  h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+  }
+
+  h1{
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  p{
+    font-size: 1.6rem;
+  }
+
+  body{
+    margin: 0;
+    padding: 0;
   }

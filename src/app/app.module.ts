@@ -14,6 +14,9 @@ import { FooterComponent } from 'src/components/layout/footer/footer.component';
 import { WizardComponent } from 'src/components/layout/wizard/wizard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { RegionsComponent } from 'src/components/regions/regions/regions.component';
+import { RegionsListComponent } from 'src/components/regions/regions-list/regions-list.component';
+import { RegionsItemComponent } from 'src/components/regions/regions-item/regions-item.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     BodyComponent,
     FooterComponent,
-    WizardComponent
+    WizardComponent,
+    RegionsComponent,
+    RegionsListComponent,
+    RegionsItemComponent
   ],
   imports: [
     BrowserModule,
