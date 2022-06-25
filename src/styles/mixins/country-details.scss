@@ -1,0 +1,55 @@
+@mixin countryDetails($primary, $secondary, $lightBackground){
+
+    .country-details{
+
+        width: 100%;
+        padding: 4rem 10rem 5rem 10rem;
+        box-sizing: border-box;
+        background-color: $lightBackground;
+    
+        &__title{
+            flex-grow: 1;
+        }
+    
+        &__header{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 15rem 10rem 1rem 10rem;
+            box-sizing: border-box;
+            background-color: $lightBackground;
+        }
+
+        &__triangle{
+            position: absolute;
+            top: 10rem;
+            left: 8rem;
+        }
+
+        &__title{
+            color: $secondary;
+            margin-bottom: 1rem;
+        }
+
+        &__body{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(100% - 20rem);
+            height: 200px;
+            margin-left: 10rem;
+            margin-right: 10rem;
+            box-sizing: border-box;
+            background-color: $white;
+            box-shadow: 0px 23px 16px rgb(0 0 0 / 5%);
+            overflow: hidden;
+        }
+
+        &__flag{
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+    }
+}

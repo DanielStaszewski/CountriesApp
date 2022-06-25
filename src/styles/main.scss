@@ -7,6 +7,7 @@
 @import './mixins/buttons.scss';
 @import './mixins/regions.scss';
 @import './mixins/country-list.scss';
+@import './mixins/country-details.scss';
 @import './mixins/countries.scss';
 @import './mixins/regions-list.scss';
 @import './mixins/regions-item.scss';
@@ -19,6 +20,7 @@
 @include spinner($primary);
 @include breadcrumbs($primary, $secondary);
 @include countryList($primary, $gray300, $lightBackground);
+@include countryDetails($primary, $secondary, $lightBackground);
 @include countries($secondary, $lightBackground);
 @include regions($primary, $secondary, $white);
 @include regionsList($primary, $secondary, $lightBackground, $white);

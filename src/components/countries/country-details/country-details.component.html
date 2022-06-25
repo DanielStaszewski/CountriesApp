@@ -1,1 +1,20 @@
-<p>{{(country$ | async).name.common}}</p>
+<div class="country-details">
+    <header class="country-details__header">
+            <breadcrumbs-component [breadcrumbs]="routeForBreadcrumbs"></breadcrumbs-component>
+            <img src="../../../assets/images/triangle.svg" alt="triangle" class="country-details__triangle">
+            <h1 class="country-details__title">
+                {{countryName}}
+            </h1>
+            <p class="country-details__description">
+                Below you will find more information about the country you have selected.
+            </p>
+    </header>
+    <section class="country-details__body">
+        <div class="country-details__flag-wrapper">
+            <img [src]="(country$ | async)?.flags?.svg" alt="flag" class="country-details__flag">
+        </div>
+        <div class="country-details__description-box">
+            
+        </div>
+    </section>
+</div>

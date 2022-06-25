@@ -17,12 +17,32 @@ export class CountryDetailsComponent implements OnInit {
   countryName: string;
   region: Region;
   country$: Observable<any>;
+  public routeForBreadcrumbs: {
+    route: string;
+    routeName: string;
+  }[];
+
 
   constructor(private route: ActivatedRoute, private store: Store<AppState>) { }
 
   ngOnInit(): void {
     this.region = this.route.snapshot.paramMap.get('region') as Region;
     this.countryName = this.route.snapshot.paramMap.get('country');
+
+    this.routeForBreadcrumbs = [
+      {
+        route: '/regions',
+        routeName: 'Regions'
+      },
+      {
+        route: '/regions/' + this.region,
+        routeName: this.capitalizeFirstLetter(this.region)
+      },
+      {
+        route: '/regions/' + this.region + '/' + this.countryName,
+        routeName: this.countryName
+      }
+    ]
 
   this.country$ = this.store.pipe(
     select(country, {
@@ -31,6 +51,10 @@ export class CountryDetailsComponent implements OnInit {
     }),
     filter((country) => !!country)
   )
+  }
+
+  capitalizeFirstLetter(text: string): string {
+    return text.charAt(0).toUpperCase() + text.slice(1);
   }
 
 }
