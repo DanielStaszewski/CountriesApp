@@ -1,3 +1,113 @@
-@mixin countryList(){
+@mixin countryList($primary, $gray300){
     
+.countries-list{
+
+    width: 100%;
+    padding: 8rem 10rem 5rem 10rem;
+    box-sizing: border-box;
+
+    &__table-container{
+        height: 70vh;
+        overflow-y: scroll;
+    }
+
+    &__table{
+        width: 100%;
+    }
+
+    &__title{
+        flex-grow: 1;
+    }
+
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 600;
+        color:  $primary;
+        padding: 9px 0;
+        margin-bottom: 16px;
+        margin-right: 2px;
+    }
+
+    &__body-content{
+        visibility: hidden;
+        transform: translateY(-100%);
+        transition: 0.3s;
+        height: 0;
+
+        &--active{
+            height: auto;
+            visibility: visible;
+            transform: translateY(0);
+            margin-bottom: 16px;
+        }
+    }
+
+    &__head-cell{
+        background: $gray300;
+        font-size: 13px;
+        font-weight: 600;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        padding-left: 15px;
+        color: #616161;
+        box-sizing: border-box;
+        text-align: left;
+
+        &--first{
+            width: 47px;  
+        }
+
+        &--second{
+            width: auto;
+        }
+
+        &--third{
+            width: auto;
+        }
+    }
+
+    &__row{
+        cursor: pointer;
+        border-left: 4px solid transparent;
+
+        &:hover{
+            background-color: #F2F4F6;
+        }
+    }
+    
+    &__cell{
+        font-size: 13px;
+        font-weight: 400;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        padding-left: 15px;
+        color: #616161;
+        border-bottom: 1px solid #E0E0E0;
+        box-sizing: border-box;
+
+        &--first{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 47px;  
+        }
+
+        &--second{
+            width: auto;
+        }
+
+        &--third{
+            width: auto;
+        }
+    }
+}
+
+
+
+
+
 }

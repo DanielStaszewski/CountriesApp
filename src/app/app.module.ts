@@ -1,5 +1,5 @@
 
-import { BrowserModule } from '@angular/platform-browser';
+
 import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
 import {Reducers} from '../store/index';
@@ -17,6 +17,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegionsComponent } from 'src/components/regions/regions/regions.component';
 import { RegionsListComponent } from 'src/components/regions/regions-list/regions-list.component';
 import { RegionsItemComponent } from 'src/components/regions/regions-item/regions-item.component';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { CountriesListComponent } from 'src/components/countries/countries-list/countries-list.component';
+
 
 @NgModule({
   declarations: [
@@ -27,10 +31,12 @@ import { RegionsItemComponent } from 'src/components/regions/regions-item/region
     WizardComponent,
     RegionsComponent,
     RegionsListComponent,
-    RegionsItemComponent
+    RegionsItemComponent,
+    CountriesListComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     HttpClientModule,
     StoreModule.forRoot(Reducers),

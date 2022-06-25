@@ -14,7 +14,7 @@
 @include header($primary, $secondary, $white);
 @include footer($primary, $secondary, $white);
 @include buttons($primary, $secondary, $white);
-@include countryList();
+@include countryList($primary, $gray300);
 @include countryItem($white, $tertiary);
 @include regions($primary, $secondary, $white);
 @include regionsList($primary, $secondary, $lightBackground, $white);

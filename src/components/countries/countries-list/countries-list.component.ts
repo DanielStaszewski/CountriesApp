@@ -18,6 +18,7 @@ export class CountriesListComponent implements OnInit {
   private region: Region;
   private subscription: Subscription = new Subscription();
   public countries = [];
+  public columns = ["#", "status", "independent"];
 
   constructor(private store: Store<AppState>, private route: ActivatedRoute) { }
 
@@ -39,6 +40,10 @@ export class CountriesListComponent implements OnInit {
 
   ngOnDestroy(){
     this.subscription.unsubscribe();
+  }
+
+  onCountryRowClicked(country){
+    
   }
 
 }
