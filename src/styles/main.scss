@@ -1,0 +1,13 @@
+@import 'colors.scss';
+
+@import './mixins/country-item.scss';
+
+@include countryItem($white, $tertiary);
+
+html{
+    font-size: 10px;
+  }
+  body,html {
+    font-family: 'Poppins', sans-serif;
+    color: #304956;
+  }
