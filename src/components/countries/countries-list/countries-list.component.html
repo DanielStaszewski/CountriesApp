@@ -16,7 +16,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <ng-container *ngFor="let country of (countries$ | async); let i = index">
+                    <ng-container *ngFor="let country of countries$ | async; let i = index">
                         <tr class="countries-list__row" (click)="onCountryRowClicked(country)">
                           <td class="countries-list__cell countries-list__cell--first">
                               <span>{{i + 1}}</span>
@@ -25,7 +25,7 @@
                              {{country.name.official}}
                           </td>
                           <td class="countries-list__cell countries-list__cell--third">
-                            {{country.capital[0]}}
+                            xd
                           </td>
                       </tr> 
                     </ng-container>

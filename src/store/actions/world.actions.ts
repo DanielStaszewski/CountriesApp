@@ -7,6 +7,7 @@ export namespace WORLD_ACTION {
     export const GET_COUNTRIES_BY_REGION_SUCCESSFULLY = 'GET_COUNTRIES_BY_REGION_SUCCESSFULLY';
     export const GET_COUNTRIES_BY_REGION_FAILED = 'GET_COUNTRIES_BY_REGION_FAILED';
     export const SET_REGION_ACTIVE = 'SET_REGION_ACTIVE';
+    export const SET_REGIONS_INACTIVE = 'SET_REGIONS_INACTIVE';
     export const SHOW_LOADING_SPINNER = 'SHOW_LOADING_SPINNER';
     export const HIDE_LOADING_SPINNER  = 'HIDE_LOADING_SPINNER';
 }
@@ -45,5 +46,10 @@ export class SetRegionActive implements Action {
     readonly type: string = WORLD_ACTION.SET_REGION_ACTIVE;
   constructor(public payload: {region: Region}) {
   }
-
+}
+  
+export class SetRegionInactive implements Action {
+  readonly type: string = WORLD_ACTION.SET_REGIONS_INACTIVE;
+constructor() {
+}
 }

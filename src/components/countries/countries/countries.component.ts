@@ -31,10 +31,8 @@ export class CountriesComponent implements OnInit {
       {
         route: '/regions/' + this.region,
         routeName: this.capitalizeFirstLetter(this.region)
-      },
+      }
     ]
-  
-  
   }
 
   capitalizeFirstLetter(text: string): string {
