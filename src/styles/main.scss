@@ -1,7 +1,12 @@
 @import 'colors.scss';
+@import 'icons.scss';
 
+@import './mixins/header.scss';
+@import './mixins/country-list.scss';
 @import './mixins/country-item.scss';
 
+@include header($primary, $secondary, $white);
+@include countryList();
 @include countryItem($white, $tertiary);
 
 html{

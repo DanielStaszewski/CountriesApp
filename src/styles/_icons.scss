@@ -1,0 +1,11 @@
+.world-icon {
+    width: 4rem;
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(94%) sepia(6%) saturate(0%) hue-rotate(69deg) brightness(105%) contrast(105%);
+    transition: 0.3s;
+
+    &:hover{
+        transform: rotate(360deg) scale(1.5);
+    }
+}
+

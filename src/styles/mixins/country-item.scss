@@ -1,5 +1,6 @@
 
 @mixin countryItem($white, $tertiary) {
+
     .country-item{
         background: $white;
         border: 1px solid $tertiary;
@@ -10,5 +11,6 @@
         margin-bottom: 25px;
         width: 100%;
     }
+    
 }
 
