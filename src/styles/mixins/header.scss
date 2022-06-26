@@ -28,6 +28,16 @@
             margin-left: 40px;
             box-sizing: border-box;
         }
+
+        &__btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;;
+            width: 100px;
+            height: 35px;
+            font-size: 14px;
+            margin-right: 40px;
+        }
     
     }
 }

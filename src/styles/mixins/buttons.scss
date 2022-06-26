@@ -15,4 +15,15 @@
             background-color: darken($primary, 10%);
         }
     }
+
+    .outline-primary-btn{
+        background-color: transparent;
+        color: $primary;
+        border: 1px solid $primary;
+
+        &:hover{
+            background-color: $primary;
+            color: $white;
+        }
+    }
 }
