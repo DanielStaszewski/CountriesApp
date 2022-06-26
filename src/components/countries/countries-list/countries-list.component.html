@@ -31,7 +31,7 @@
                              {{country.name.official}}
                           </td>
                           <td class="countries-list__cell countries-list__cell--fourth">
-                            {{country.capital | join : '; '}}
+                            {{country.capital ? (country.capital | join : '; ') : '-'}}
                           </td>
                       </tr> 
                     </ng-container>
