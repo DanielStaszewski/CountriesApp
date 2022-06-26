@@ -14,7 +14,70 @@
             <img [src]="(country$ | async)?.flags?.svg" alt="flag" class="country-details__flag">
         </div>
         <div class="country-details__description-box">
-            
+            <h2 class="description-box__title">
+                {{(country$ | async)?.name?.official}}
+            </h2>
+            <div class="description-box__details">
+
+                <div class="details__box">
+                    <span class="details__label">
+                        Capital(s):
+                    </span>
+                    <span class="details__text">
+                        {{(country$ | async)?.capital | join : '; '}}
+                    </span>
+                </div>
+
+                <div class="details__box">
+                    <span class="details__label">
+                        Currencies:
+                    </span>
+                    <span class="details__text text--one-line" 
+                    *ngFor="let currency of (country$ | async)?.currencies | keyvalue; let last = last;"
+                    >
+                        <ng-container *ngIf="(country$ | async)?.currencies.length > 0 && !last; else oneCurrency">
+                            {{currency.key + ';'}}
+                        </ng-container>
+                        <ng-template #oneCurrency>
+                            {{currency.key}}
+                        </ng-template>
+                    </span>
+                </div>
+
+                <div class="details__box">
+                    <span class="details__label">
+                        Population:
+                    </span>
+                    <span class="details__text">
+                        {{(country$ | async)?.population | thousandSuff : 2}}
+                    </span>
+                </div>
+
+                <div class="details__box">
+                    <span class="details__label">
+                        Subregion:
+                    </span>
+                    <span class="details__text">
+                        {{(country$ | async)?.subregion}}
+                    </span>
+                </div>
+
+                <div class="details__box">
+                    <span class="details__label">
+                        Languages:
+                    </span>
+                    <span class="details__text text--one-line" 
+                    *ngFor="let language of (country$ | async)?.languages | keyvalue; let last = last;"
+                    >
+                        <ng-container *ngIf="(country$ | async)?.languages.length > 0 && !last; else oneLanguage">
+                            {{language.value + ';'}}
+                        </ng-container>
+                        <ng-template #oneLanguage>
+                            {{language.value}}
+                        </ng-template>
+                    </span>
+                </div>
+            </div>
         </div>
     </section>
 </div>

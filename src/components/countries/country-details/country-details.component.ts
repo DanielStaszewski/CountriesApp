@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { Region } from 'src/models/types/region.type';
 import { AppState } from 'src/store';
+import { capitalizeFirstLetter } from 'src/utils/capitalize';
 import { country } from '../../../store/index';
 
 @Component({
@@ -36,7 +37,7 @@ export class CountryDetailsComponent implements OnInit {
       },
       {
         route: '/regions/' + this.region,
-        routeName: this.capitalizeFirstLetter(this.region)
+        routeName: capitalizeFirstLetter(this.region)
       },
       {
         route: '/regions/' + this.region + '/' + this.countryName,
@@ -53,8 +54,6 @@ export class CountryDetailsComponent implements OnInit {
   )
   }
 
-  capitalizeFirstLetter(text: string): string {
-    return text.charAt(0).toUpperCase() + text.slice(1);
-  }
+  
 
 }

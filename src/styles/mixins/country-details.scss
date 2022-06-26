@@ -34,22 +34,91 @@
         &__body{
             position: relative;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
             width: calc(100% - 20rem);
-            height: 200px;
             margin-left: 10rem;
             margin-right: 10rem;
+            padding: 5rem 10rem;
             box-sizing: border-box;
             background-color: $white;
             box-shadow: 0px 23px 16px rgb(0 0 0 / 5%);
             overflow: hidden;
         }
 
-        &__flag{
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
+        &__flag-wrapper{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 30%;
+            padding: 1rem;
+            box-sizing: border-box;
         }
+
+        &__flag{
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border: 1px solid rgb(204, 204, 204);
+        }
+
+        &__description-box{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            width: 70%;
+
+        }
+
+
+        .description-box{
+
+            &__title{
+                padding: 1rem;
+                font-size: 28px;
+                margin-bottom: 1rem;
+                width: 100%;
+            }
+
+            &__details{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+        }
+
+
+        .details{
+
+            &__box{
+                width: calc(100% / 3);
+                padding: 1.4rem 1rem;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                color: $secondary;
+            }
+
+            &__label{
+                display: block;
+                font-size: 13px;
+                font-weight: bold;
+                line-height: 1.5;
+            }
+
+            &__text{
+                display: block;
+                font-size: 20px;
+                line-height: 1.5;
+                
+                &--one-line{
+                    display: inline-block;
+                    margin-left: 4px;
+                }
+            }
+
+        }
+
     }
 }
