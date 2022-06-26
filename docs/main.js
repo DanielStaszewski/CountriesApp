@@ -94,7 +94,7 @@ class BreadcrumbsComponent {
     }
 }
 BreadcrumbsComponent.ɵfac = function BreadcrumbsComponent_Factory(t) { return new (t || BreadcrumbsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"])); };
-BreadcrumbsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: BreadcrumbsComponent, selectors: [["breadcrumbs-component"]], inputs: { breadcrumbs: "breadcrumbs" }, decls: 2, vars: 1, consts: [[1, "breadcrumbs-row"], [4, "ngFor", "ngForOf"], [3, "ngClass", "click"], ["class", "crumb-icon", "src", "../../../assets/images/next.svg", 4, "ngIf"], ["src", "../../../assets/images/next.svg", 1, "crumb-icon"]], template: function BreadcrumbsComponent_Template(rf, ctx) { if (rf & 1) {
+BreadcrumbsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: BreadcrumbsComponent, selectors: [["breadcrumbs-component"]], inputs: { breadcrumbs: "breadcrumbs" }, decls: 2, vars: 1, consts: [[1, "breadcrumbs-row"], [4, "ngFor", "ngForOf"], [3, "ngClass", "click"], ["class", "crumb-icon", "src", "assets/images/next.svg", 4, "ngIf"], ["src", "assets/images/next.svg", 1, "crumb-icon"]], template: function BreadcrumbsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, BreadcrumbsComponent_ng_container_1_Template, 4, 3, "ng-container", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -228,7 +228,7 @@ class CountryDetailsComponent {
     }
 }
 CountryDetailsComponent.ɵfac = function CountryDetailsComponent_Factory(t) { return new (t || CountryDetailsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdirectiveInject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["Store"])); };
-CountryDetailsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineComponent"]({ type: CountryDetailsComponent, selectors: [["country-details-component"]], decls: 49, vars: 33, consts: [[1, "country-details"], [1, "country-details__header"], [3, "breadcrumbs"], ["src", "../../../assets/images/triangle.svg", "alt", "triangle", 1, "country-details__triangle"], [1, "country-details__title"], [1, "country-details__description"], [1, "country-details__body"], [1, "country-details__flag-wrapper"], ["alt", "flag", 1, "country-details__flag", 3, "src"], [1, "country-details__description-box"], [1, "description-box__title"], [1, "description-box__details"], [1, "details__box"], [1, "details__label"], [1, "details__text"], ["class", "details__text text--one-line", 4, "ngFor", "ngForOf"], [1, "details__text", "text--one-line"], [4, "ngIf", "ngIfElse"], ["oneCurrency", ""], ["oneLanguage", ""]], template: function CountryDetailsComponent_Template(rf, ctx) { if (rf & 1) {
+CountryDetailsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineComponent"]({ type: CountryDetailsComponent, selectors: [["country-details-component"]], decls: 49, vars: 33, consts: [[1, "country-details"], [1, "country-details__header"], [3, "breadcrumbs"], ["src", "assets/images/triangle.svg", "alt", "triangle", 1, "country-details__triangle"], [1, "country-details__title"], [1, "country-details__description"], [1, "country-details__body"], [1, "country-details__flag-wrapper"], ["alt", "flag", 1, "country-details__flag", 3, "src"], [1, "country-details__description-box"], [1, "description-box__title"], [1, "description-box__details"], [1, "details__box"], [1, "details__label"], [1, "details__text"], ["class", "details__text text--one-line", 4, "ngFor", "ngForOf"], [1, "details__text", "text--one-line"], [4, "ngIf", "ngIfElse"], ["oneCurrency", ""], ["oneLanguage", ""]], template: function CountryDetailsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelementStart"](1, "header", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵelement"](2, "breadcrumbs-component", 2);
@@ -465,7 +465,7 @@ class HeaderComponent {
     }
 }
 HeaderComponent.ɵfac = function HeaderComponent_Factory(t) { return new (t || HeaderComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"])); };
-HeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({ type: HeaderComponent, selectors: [["header-component"]], decls: 4, vars: 1, consts: [[1, "header"], [1, "header__logo", 3, "click"], ["src", "../../../assets/images/world.svg", "alt", "world", 1, "world-icon"], [4, "ngIf"], [1, "btn", "outline-primary-btn", "header__btn", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) { if (rf & 1) {
+HeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({ type: HeaderComponent, selectors: [["header-component"]], decls: 4, vars: 1, consts: [[1, "header"], [1, "header__logo", 3, "click"], ["src", "assets/images/world.svg", "alt", "world", 1, "world-icon"], [4, "ngIf"], [1, "btn", "outline-primary-btn", "header__btn", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function HeaderComponent_Template_div_click_1_listener() { return ctx.navigateToHome(); });
@@ -514,7 +514,7 @@ class RegionsItemComponent {
     }
 }
 RegionsItemComponent.ɵfac = function RegionsItemComponent_Factory(t) { return new (t || RegionsItemComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["Store"])); };
-RegionsItemComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({ type: RegionsItemComponent, selectors: [["regions-item-component"]], inputs: { region: "region" }, decls: 7, vars: 3, consts: [[1, "regions-item", 3, "click"], [1, "regions-item__title"], ["src", "../../../assets/images/triangle.svg", "alt", "triangle", 1, "regions-item__triangle"], [1, "regions-item__square"], ["alt", "", 1, "regions-item__continent-img", 3, "src"], ["alt", "", 1, "regions-item__continent-img-bgc", 3, "src"]], template: function RegionsItemComponent_Template(rf, ctx) { if (rf & 1) {
+RegionsItemComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({ type: RegionsItemComponent, selectors: [["regions-item-component"]], inputs: { region: "region" }, decls: 7, vars: 3, consts: [[1, "regions-item", 3, "click"], [1, "regions-item__title"], ["src", "assets/images/triangle.svg", "alt", "triangle", 1, "regions-item__triangle"], [1, "regions-item__square"], ["alt", "", 1, "regions-item__continent-img", 3, "src"], ["alt", "", 1, "regions-item__continent-img-bgc", 3, "src"]], template: function RegionsItemComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function RegionsItemComponent_Template_div_click_0_listener() { return ctx.onRegionClick(); });
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "h2", 1);
@@ -530,9 +530,9 @@ RegionsItemComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdef
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"](" ", ctx.region, " ");
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("src", "../../../assets/images/" + ctx.region + ".svg", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsanitizeUrl"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("src", "assets/images/" + ctx.region + ".svg", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsanitizeUrl"]);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("src", "../../../assets/images/" + ctx.region + ".svg", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsanitizeUrl"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("src", "assets/images/" + ctx.region + ".svg", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsanitizeUrl"]);
     } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJyZWdpb25zLWl0ZW0uY29tcG9uZW50LnNjc3MifQ== */"] });
 
 
@@ -657,7 +657,7 @@ class ModalComponent {
     }
 }
 ModalComponent.ɵfac = function ModalComponent_Factory(t) { return new (t || ModalComponent)(); };
-ModalComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ModalComponent, selectors: [["modal-component"]], inputs: { title: "title" }, outputs: { cancelClicked: "cancelClicked" }, ngContentSelectors: _c0, decls: 8, vars: 1, consts: [[1, "modal"], [1, "modal__top"], [1, "modal__title"], ["src", "../../../assets/images/close-icon.svg", 1, "modal__close-btn", 3, "click"], [1, "modal__content"], [1, "overlay"]], template: function ModalComponent_Template(rf, ctx) { if (rf & 1) {
+ModalComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ModalComponent, selectors: [["modal-component"]], inputs: { title: "title" }, outputs: { cancelClicked: "cancelClicked" }, ngContentSelectors: _c0, decls: 8, vars: 1, consts: [[1, "modal"], [1, "modal__top"], [1, "modal__title"], ["src", "assets/images/close-icon.svg", 1, "modal__close-btn", 3, "click"], [1, "modal__content"], [1, "overlay"]], template: function ModalComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵprojectionDef"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
@@ -860,7 +860,7 @@ class RegionsComponent {
     }
 }
 RegionsComponent.ɵfac = function RegionsComponent_Factory(t) { return new (t || RegionsComponent)(); };
-RegionsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: RegionsComponent, selectors: [["regions-component"]], decls: 12, vars: 0, consts: [[1, "regions"], [1, "regions__header"], [1, "regions__caption-left"], ["src", "../../../assets/images/triangle.svg", "alt", "triangle", 1, "regions__triangle"], [1, "regions__title"], [1, "regions__description"], [1, "regions__caption-right"], ["src", "../../../assets/images/continents-of-earth.svg", "alt", "continents", 1, "regions__continents-img"], [1, "regions__list"]], template: function RegionsComponent_Template(rf, ctx) { if (rf & 1) {
+RegionsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: RegionsComponent, selectors: [["regions-component"]], decls: 12, vars: 0, consts: [[1, "regions"], [1, "regions__header"], [1, "regions__caption-left"], ["src", "assets/images/triangle.svg", "alt", "triangle", 1, "regions__triangle"], [1, "regions__title"], [1, "regions__description"], [1, "regions__caption-right"], ["src", "assets/images/continents-of-earth.svg", "alt", "continents", 1, "regions__continents-img"], [1, "regions__list"]], template: function RegionsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "header", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -1091,7 +1091,7 @@ class RegionsListComponent {
     }
 }
 RegionsListComponent.ɵfac = function RegionsListComponent_Factory(t) { return new (t || RegionsListComponent)(); };
-RegionsListComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: RegionsListComponent, selectors: [["regions-list-component"]], decls: 6, vars: 1, consts: [[1, "regions-list"], [1, "regions-list__title"], ["src", "../../../assets/images/triangle.svg", "alt", "triangle", 1, "regions-list__triangle"], [1, "regions-list__list"], ["class", "regions-list__item", 4, "ngFor", "ngForOf"], [1, "regions-list__item"], [3, "region"]], template: function RegionsListComponent_Template(rf, ctx) { if (rf & 1) {
+RegionsListComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: RegionsListComponent, selectors: [["regions-list-component"]], decls: 6, vars: 1, consts: [[1, "regions-list"], [1, "regions-list__title"], ["src", "assets/images/triangle.svg", "alt", "triangle", 1, "regions-list__triangle"], [1, "regions-list__list"], ["class", "regions-list__item", 4, "ngFor", "ngForOf"], [1, "regions-list__item"], [3, "region"]], template: function RegionsListComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "h1", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, "Choose region");
@@ -1248,7 +1248,7 @@ class CountriesComponent {
     }
 }
 CountriesComponent.ɵfac = function CountriesComponent_Factory(t) { return new (t || CountriesComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["Store"])); };
-CountriesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({ type: CountriesComponent, selectors: [["app-countries"]], decls: 10, vars: 2, consts: [[1, "countries"], [1, "countries__header"], [3, "breadcrumbs"], ["src", "../../../assets/images/triangle.svg", "alt", "triangle", 1, "countries__triangle"], [1, "countries__title"], [1, "countries__description"], [1, "countries__list"]], template: function CountriesComponent_Template(rf, ctx) { if (rf & 1) {
+CountriesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({ type: CountriesComponent, selectors: [["app-countries"]], decls: 10, vars: 2, consts: [[1, "countries"], [1, "countries__header"], [3, "breadcrumbs"], ["src", "assets/images/triangle.svg", "alt", "triangle", 1, "countries__triangle"], [1, "countries__title"], [1, "countries__description"], [1, "countries__list"]], template: function CountriesComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "header", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](2, "breadcrumbs-component", 2);
@@ -1537,7 +1537,7 @@ class FooterComponent {
     }
 }
 FooterComponent.ɵfac = function FooterComponent_Factory(t) { return new (t || FooterComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_0__["Router"])); };
-FooterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: FooterComponent, selectors: [["footer-component"]], decls: 10, vars: 1, consts: [[1, "footer"], [1, "footer__content"], [1, "footer__logo", 3, "click"], ["src", "../../../assets/images/world.svg", "alt", "world", 1, "world-icon"], [1, "btn", "primary-btn", "footer__btn", 3, "click"], [1, "footer__bottom"], [1, "footer__rights"], [4, "ngIf"], ["title", "About me", 3, "cancelClicked"], [1, "footer-modal"], ["src", "../../../assets/images/profile.png", "alt", "face", 1, "footer-modal__img"], [1, "footer-modal__content"], [1, "footer-modal__name"], [1, "footer-modal__description"]], template: function FooterComponent_Template(rf, ctx) { if (rf & 1) {
+FooterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: FooterComponent, selectors: [["footer-component"]], decls: 10, vars: 1, consts: [[1, "footer"], [1, "footer__content"], [1, "footer__logo", 3, "click"], ["src", "assets/images/world.svg", "alt", "world", 1, "world-icon"], [1, "btn", "primary-btn", "footer__btn", 3, "click"], [1, "footer__bottom"], [1, "footer__rights"], [4, "ngIf"], ["title", "About me", 3, "cancelClicked"], [1, "footer-modal"], ["src", "assets/images/profile.png", "alt", "face", 1, "footer-modal__img"], [1, "footer-modal__content"], [1, "footer-modal__name"], [1, "footer-modal__description"]], template: function FooterComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "footer", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 2);
