@@ -8,9 +8,12 @@
                             #
                         </th>
                         <th class="countries-list__head-cell countries-list__head-cell--second">
-                            Name
+                            Flag
                         </th>
                         <th class="countries-list__head-cell countries-list__head-cell--third">
+                            Name
+                        </th>
+                        <th class="countries-list__head-cell countries-list__head-cell--fourth">
                            Capital
                         </th>
                     </tr>
@@ -22,10 +25,13 @@
                               <span>{{i + 1}}</span>
                           </td>
                           <td class="countries-list__cell countries-list__cell--second">
-                             {{country.name.official}}
+                            <img class="countries-list__flag" [src]="country.flags.svg" alt="flag">
                           </td>
                           <td class="countries-list__cell countries-list__cell--third">
-                            xd
+                             {{country.name.official}}
+                          </td>
+                          <td class="countries-list__cell countries-list__cell--fourth">
+                            {{country.capital | join : '; '}}
                           </td>
                       </tr> 
                     </ng-container>

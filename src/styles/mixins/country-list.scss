@@ -34,6 +34,12 @@
         margin-right: 2px;
     }
 
+    &__flag{
+        transform: translateY(5px);
+        width: 30px;
+        object-fit: contain;
+    }
+
     &__body-content{
         visibility: hidden;
         transform: translateY(-100%);
@@ -90,6 +96,7 @@
         color: #616161;
         border-bottom: 1px solid #E0E0E0;
         box-sizing: border-box;
+        line-height: 31px;
 
         &--first{
             display: flex;
