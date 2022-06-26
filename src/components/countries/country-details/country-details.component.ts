@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { Region } from 'src/models/types/region.type';
 import { AppState } from 'src/store';
+import { GetCountryDetails } from 'src/store/actions/world.actions';
 import { capitalizeFirstLetter } from 'src/utils/capitalize';
 import { country } from '../../../store/index';
 
@@ -29,6 +30,7 @@ export class CountryDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.region = this.route.snapshot.paramMap.get('region') as Region;
     this.countryName = this.route.snapshot.paramMap.get('country');
+    this.store.dispatch(new GetCountryDetails({regionName: this.region, countryName: this.countryName}));
 
     this.routeForBreadcrumbs = [
       {
@@ -51,9 +53,6 @@ export class CountryDetailsComponent implements OnInit {
       country: this.countryName
     }),
     filter((country) => !!country)
-  )
+    )
   }
-
-  
-
 }

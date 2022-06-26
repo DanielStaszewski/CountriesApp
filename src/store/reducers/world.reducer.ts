@@ -49,9 +49,23 @@ export function worldReducer(worldState = initialWorldState, action): WorldState
             
             case WORLD_ACTION.GET_COUNTRIES_BY_REGION_SUCCESSFULLY:
                 const regionIndex = draft.regions.findIndex(region => region.name === action.payload.regionName);
-                if(regionIndex !== -1){
-                    draft.regions[regionIndex].countries = action.payload.countries;
-                }
+                if(regionIndex === -1) return;
+                draft.regions[regionIndex].countries = action.payload.countries;
+                return;
+
+            case WORLD_ACTION.GET_COUNTRY_DETAILS_SUCCESSFULLY:
+                const countryRegionIndex = draft.regions.findIndex(region => region.name === action.payload.regionName);
+                const fetchedCountry = action.payload.country[0];
+                if(countryRegionIndex === -1) return;
+                if(draft.regions[countryRegionIndex].countries.includes(country => country?.name?.common === fetchedCountry.name.common)) return;
+                draft.regions[countryRegionIndex].countries = [
+                    ...draft.regions[countryRegionIndex].countries,
+                    fetchedCountry
+                ]
+                return;
+
+            case WORLD_ACTION.GET_COUNTRY_DETAILS_FAILED:
+                console.error(action.payload.error);
                 return;
 
             case WORLD_ACTION.GET_COUNTRIES_BY_REGION_FAILED:
@@ -60,10 +74,9 @@ export function worldReducer(worldState = initialWorldState, action): WorldState
 
             case WORLD_ACTION.SET_REGION_ACTIVE:
                 const regionActiveIndex = draft.regions.findIndex(region => region.name === action.payload.region);
-                if(regionActiveIndex !== -1){
-                    draft.regions.map(region => ({...region, active: false}));
-                    draft.regions[regionActiveIndex].active = true;
-                }
+                if(regionActiveIndex === -1) return;
+                draft.regions.map(region => ({...region, active: false}));
+                draft.regions[regionActiveIndex].active = true;
                 return;
             
             case WORLD_ACTION.SHOW_LOADING_SPINNER:
