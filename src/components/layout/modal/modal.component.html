@@ -1,0 +1,19 @@
+<div class="modal">
+    <div class="modal__top">
+        <h3 class="modal__title">
+            {{title}}
+        </h3>
+        <img class="modal__close-btn" (click)="cancel()" src="../../../assets/images/close-icon.svg">
+    </div>
+    <div class="modal__content">
+        <ng-content></ng-content>
+    </div>
+    <div>
+        <div class="modal__buttons">
+            <button class="btn primary-btn modal__btn" *ngIf="cancelButton" (click)="cancel()">
+                Close
+            </button>
+        </div>
+    </div>
+</div>
+<div class="overlay"></div>

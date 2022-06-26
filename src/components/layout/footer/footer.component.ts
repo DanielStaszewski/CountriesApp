@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  public isModalOpened = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  openModal(): void{
+    this.isModalOpened = true;
+  }
+
+  closeModal(): void{
+    this.isModalOpened = false;
   }
 
 }
