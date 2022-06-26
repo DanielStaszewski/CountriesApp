@@ -24,6 +24,7 @@ import { CountriesComponent } from 'src/components/countries/countries/countries
 import { BreadcrumbsComponent } from 'src/components/layout/breadcrumbs/breadcrumbs.component';
 import { SpinnerComponent } from 'src/components/layout/spinner/spinner.component';
 import { CountryDetailsComponent } from 'src/components/countries/country-details/country-details.component';
+import { JoinPipe } from 'src/pipes/join.pipe';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { CountryDetailsComponent } from 'src/components/countries/country-detail
     CountriesComponent,
     BreadcrumbsComponent,
     SpinnerComponent,
-    CountryDetailsComponent
+    CountryDetailsComponent,
+    JoinPipe
   ],
   imports: [
     BrowserModule,
