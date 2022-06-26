@@ -8,7 +8,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ModalComponent implements OnInit {
 
   @Input() title: string;
-  @Input() cancelButton: string;
   @Output() cancelClicked = new EventEmitter();
 
   constructor() { }

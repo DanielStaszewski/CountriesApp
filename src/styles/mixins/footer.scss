@@ -43,4 +43,33 @@
         }
 
     }
+
+    .footer-modal{
+        display: flex;
+
+        &__content{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            padding-left: 4rem;
+            box-sizing: border-box;
+        }
+
+        &__img{
+            width: 130px;
+            object-fit: contain;
+        }
+
+        &__name{
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        &__description{
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+
+    }
 }

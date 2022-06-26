@@ -10,8 +10,8 @@
         cursor: default;
     }
     .modal {
-        width: 510px;
-        height: 221px;
+        min-width: 500px;
+        min-height: 300px;
         position: fixed;
         left: 50%;
         top: 50%;
@@ -41,24 +41,11 @@
             }
         }
     
-        &__buttons {
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            margin-top: 1.5rem;
-        }
-    
         &__close-btn {
             position: relative;
             width: 12px;
             height: 12px;
             cursor: pointer;
-        }
-    
-        &__btn {
-            width: 200px;
-            height: 48px;
-            font-size: 16px;
         }
     } 
 }

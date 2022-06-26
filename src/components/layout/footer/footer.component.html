@@ -11,5 +11,17 @@
 </footer>
 
 <ng-container *ngIf="isModalOpened">
-    <modal-component title="About me" (cancelClicked)="closeModal()"></modal-component>
+    <modal-component title="About me" (cancelClicked)="closeModal()">
+        <div class="footer-modal">
+            <img src="../../../assets/images/profile.png" alt="face" class="footer-modal__img">
+            <div class="footer-modal__content">
+                <h2 class="footer-modal__name">Daniel Staszewski</h2>
+                <p class="footer-modal__description">I am a graduate of Social Informatics, and I am constantly 
+                    developing my skills in Web Development, UX / UI, HCI, 
+                    and interface design. Frontend programming is my passion; I greatly support the TypeScript language and the Angular 
+                    framework. I also develop skills in the React library. I have 
+                    experience in designing applications/websites.</p>
+            </div>
+        </div>
+    </modal-component>
 </ng-container>
