@@ -20,9 +20,9 @@ export class WorldEffects{
         switchMap(
             (action: any) => this.worldService.getCountriesByRegion(action.payload.region)
                 .pipe(
-                    tap(() => this.store.dispatch(new HideLoadingSpinner())),
                     map((response: Country[]) => new GetCountriesByRegionSuccessfully({regionName: action.payload.region, countries: response})),
-                    catchError(() => of(new GetCountriesByRegionFailed({error: "Fetching countries failed"})))
+                    catchError(() => of(new GetCountriesByRegionFailed({error: "Fetching countries failed"}))),
+                    tap(() => this.store.dispatch(new HideLoadingSpinner()))
                 )
         )
     )
@@ -34,9 +34,10 @@ export class WorldEffects{
         switchMap(
             (action: any) => this.worldService.getCountryDetails(action.payload.countryName)
                 .pipe(
-                    tap(() => this.store.dispatch(new HideLoadingSpinner())),
+
                     map((response: Country[]) => new GetCountryDetailsSuccessfully({regionName: action.payload.regionName, country: response[0]})),
-                    catchError(() => of(new GetCountryDetailsFailed({error: "Fetching country details failed"})))
+                    catchError(() => of(new GetCountryDetailsFailed({error: "Fetching country details failed"}))),
+                    tap(() => this.store.dispatch(new HideLoadingSpinner()))
                 )
         )
     )
