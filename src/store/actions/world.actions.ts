@@ -1,4 +1,5 @@
 import { Action } from "@ngrx/store";
+import { Country } from "src/models/interfaces/country.model";
 import { Region } from "src/models/types/region.type";
 
 
@@ -35,7 +36,7 @@ export class GetCountriesByRegion implements Action {
 
 export class GetCountriesByRegionSuccessfully implements Action {
     readonly type: string = WORLD_ACTION.GET_COUNTRIES_BY_REGION_SUCCESSFULLY;
-    constructor(public payload: {regionName: Region, countries: any}) {
+    constructor(public payload: {regionName: Region, countries: Country[]}) {
   }
 }
 
@@ -53,7 +54,7 @@ constructor(public payload: {regionName: Region, countryName: string}) {
 
 export class GetCountryDetailsSuccessfully implements Action {
   readonly type: string = WORLD_ACTION.GET_COUNTRY_DETAILS_SUCCESSFULLY;
-  constructor(public payload: {regionName: Region, country: any}) {
+  constructor(public payload: {regionName: Region, country: Country}) {
 }
 }
 

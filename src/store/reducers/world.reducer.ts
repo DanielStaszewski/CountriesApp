@@ -55,7 +55,7 @@ export function worldReducer(worldState = initialWorldState, action): WorldState
 
             case WORLD_ACTION.GET_COUNTRY_DETAILS_SUCCESSFULLY:
                 const countryRegionIndex = draft.regions.findIndex(region => region.name === action.payload.regionName);
-                const fetchedCountry = action.payload.country[0];
+                const fetchedCountry = action.payload.country;
                 if(countryRegionIndex === -1) return;
                 if(draft.regions[countryRegionIndex].countries.includes(country => country?.name?.common === fetchedCountry.name.common)) return;
                 draft.regions[countryRegionIndex].countries = [

@@ -8,6 +8,7 @@ import { WorldService } from "src/services/world.service";
 import { AppState } from "..";
 import { GetCountriesByRegionFailed, GetCountriesByRegionSuccessfully, GetCountryDetailsFailed, GetCountryDetailsSuccessfully, HideLoadingSpinner, ShowLoadingSpinner, WORLD_ACTION } from "../actions/world.actions";
 import {catchError, map, switchMap, tap} from 'rxjs/operators';
+import { Country } from "src/models/interfaces/country.model";
 
 @Injectable()
 export class WorldEffects{
@@ -20,7 +21,7 @@ export class WorldEffects{
             (action: any) => this.worldService.getCountriesByRegion(action.payload.region)
                 .pipe(
                     tap(() => this.store.dispatch(new HideLoadingSpinner())),
-                    map((response) => new GetCountriesByRegionSuccessfully({regionName: action.payload.region, countries: response})),
+                    map((response: Country[]) => new GetCountriesByRegionSuccessfully({regionName: action.payload.region, countries: response})),
                     catchError(() => of(new GetCountriesByRegionFailed({error: "Fetching countries failed"})))
                 )
         )
@@ -34,7 +35,7 @@ export class WorldEffects{
             (action: any) => this.worldService.getCountryDetails(action.payload.countryName)
                 .pipe(
                     tap(() => this.store.dispatch(new HideLoadingSpinner())),
-                    map((response) => new GetCountryDetailsSuccessfully({regionName: action.payload.regionName, country: response})),
+                    map((response: Country[]) => new GetCountryDetailsSuccessfully({regionName: action.payload.regionName, country: response[0]})),
                     catchError(() => of(new GetCountryDetailsFailed({error: "Fetching country details failed"})))
                 )
         )

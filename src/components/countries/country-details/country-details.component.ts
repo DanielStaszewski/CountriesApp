@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
+import { Country } from 'src/models/interfaces/country.model';
 import { Region } from 'src/models/types/region.type';
 import { AppState } from 'src/store';
 import { GetCountryDetails } from 'src/store/actions/world.actions';
@@ -16,9 +17,9 @@ import { country } from '../../../store/index';
 })
 export class CountryDetailsComponent implements OnInit {
 
-  countryName: string;
-  region: Region;
-  country$: Observable<any>;
+  public countryName: string;
+  public region: Region;
+  public country$: Observable<Country>;
   public routeForBreadcrumbs: {
     route: string;
     routeName: string;

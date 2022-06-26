@@ -19,7 +19,7 @@ export class RegionsItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onRegionClick(){
+  onRegionClick(): void{
     this.store.dispatch(new SetRegionActive({region: this.region}));
     this.router.navigate(['/regions', this.region]);
   }

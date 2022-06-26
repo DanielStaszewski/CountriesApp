@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import { Region } from 'src/models/types/region.type';
 import { AppState } from 'src/store';
 import { GetCountriesByRegion } from 'src/store/actions/world.actions';
+import { capitalizeFirstLetter } from 'src/utils/capitalize';
 
 @Component({
   selector: 'app-countries',
@@ -12,7 +13,8 @@ import { GetCountriesByRegion } from 'src/store/actions/world.actions';
 })
 export class CountriesComponent implements OnInit {
 
-  region: Region;
+  private region: Region;
+  public capitalizedRegion: string;
   public routeForBreadcrumbs: {
     route: string;
     routeName: string;
@@ -22,7 +24,8 @@ export class CountriesComponent implements OnInit {
 
   ngOnInit(): void {
     this.region = this.route.snapshot.paramMap.get('region') as Region;
-    this.store.dispatch(new GetCountriesByRegion({region: this.region}))
+    this.capitalizedRegion = capitalizeFirstLetter(this.region);
+    if(this.region) 
     this.routeForBreadcrumbs = [
       {
         route: '/regions',
@@ -30,13 +33,9 @@ export class CountriesComponent implements OnInit {
       },
       {
         route: '/regions/' + this.region,
-        routeName: this.capitalizeFirstLetter(this.region)
+        routeName: capitalizeFirstLetter(this.region)
       }
     ]
-  }
-
-  capitalizeFirstLetter(text: string): string {
-    return text.charAt(0).toUpperCase() + text.slice(1);
   }
 
 }
