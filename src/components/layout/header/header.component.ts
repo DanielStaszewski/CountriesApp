@@ -29,6 +29,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   }
 
+  navigateToHome(): void{
+    this.router.navigate(['/']);
+  }
+
   goBack(): void {
     this.router.navigate([this.router.url.substring(0, this.router.url.lastIndexOf('/'))]);
   }

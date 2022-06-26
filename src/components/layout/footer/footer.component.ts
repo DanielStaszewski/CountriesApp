@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'footer-component',
@@ -9,7 +10,7 @@ export class FooterComponent implements OnInit {
 
   public isModalOpened = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -20,6 +21,10 @@ export class FooterComponent implements OnInit {
 
   closeModal(): void{
     this.isModalOpened = false;
+  }
+
+  navigateToHome(): void{
+    this.router.navigate(['/']);
   }
 
 }
